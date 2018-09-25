@@ -21,9 +21,39 @@
 						<img src="stormtrooper2.png">
 						<span>My Brother</span>
 					</div>
-					<div class="post-date">Today</div>
+					<!--<div class="post-date">Today</div> -->
+					<div class="post-date"><p id="fecha"></p></div>
+					<script>
+						var dFecha = new Date('2018/9/24');
+						var dToday = new Date();
+						var iDay= dToday.getDate();
+						var iMonth= dToday.getMonth();
+						var iYear= dToday.getFullYear();
+						var dToday= new Date(iYear, iMonth, iDay);
+						var cFecha = 'Hola';
+						function formatDate(date) {
+						  var monthNames = [
+							"Jan", "Feb", "Mar",
+							"Apr", "May", "Jun", "Jul",
+							"Aug", "Sept", "Oct",
+							"Nov", "Dec"
+						  ];
+
+						  var day = date.getDate();
+						  var monthIndex = date.getMonth();
+						  var year = date.getFullYear();
+
+						  return monthNames[monthIndex] + ' ' + day + ', ' + year;
+						}
+						if (dFecha.getTime() === dToday.getTime()){
+							cFecha = "Today";
+						} else {
+							cFecha = formatDate(dFecha);
+						};
+						document.getElementById("fecha").innerHTML = cFecha;
+					</script>
 					<h4 class="post-title">Is my brother a prodigy?</h4>
-					<div class="post-contect">
+					<div class="post-content">
 						<p>If somebody would have told me a week ago that my brother 
 						would be able to make a <strong>web site</strong>, I would not have 
 						believed any of you, rebel scum!</p>
@@ -40,7 +70,7 @@
 					</div>
 					<div class="post-date">Sept 23, 2018</div>
 					<h4 class="post-title">Is my child a prodigy?</h4>
-					<div class="post-contect">
+					<div class="post-content">
 						<p>If somebody would have told me a week ago that my child 
 						would be able to make a <strong>web site</strong>, I would not have 
 						believed him.</p>
@@ -57,7 +87,7 @@
 					</div>
 					<div class="post-date">Sept 23, 2018</div>
 					<h4 class="post-title">Becoming a Web Developer</h4>
-					<div class="post-contect">
+					<div class="post-content">
 						<p>If somebody would have told me a week ago that I 
 						would be able to make a <strong>web site</strong>, I would not have 
 						believed them.</p>

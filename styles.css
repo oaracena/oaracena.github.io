@@ -74,6 +74,16 @@ a:hover {
 .post-author span {
 	margin-left: 16px;
 }
+#fecha {
+	color: #D2D2D2;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	line-height: 0.0;
+	display: block;
+	margin-block-start: 0.6em;
+}
 .post-date {
 	color: #D2D2D2;
 	font-size: 14px;
